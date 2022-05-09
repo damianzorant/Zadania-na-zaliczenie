@@ -11,5 +11,6 @@ public class Human extends Animal{
         this.lastName = lastName;
     }
 
+
 }
 
