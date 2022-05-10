@@ -13,12 +13,18 @@ public class Main {
 //        System.out.println("pies waży " +dog.getWeight());
 //
 //        Human me = new Human("Damian", "Zorant");
-//        System.out.println(me.getWeight());
-//        System.out.println(me.spacies);
-//        System.out.println(me.name);
+
+        Human human = new Human();
 
         Car car = new Car("Golf", "Volkswagen");
-        car.Colour = "Red";
+        car.Colour = "Black";
 
+        human.car = car;
+        System.out.println(human.car.Model + human.car.Producer + human.car.Colour);
+
+        human.getSalary();
+
+        human.setSalary(100D);
+        System.out.println("Kwota wynosi :" + human.getSalary());
     }
 }
