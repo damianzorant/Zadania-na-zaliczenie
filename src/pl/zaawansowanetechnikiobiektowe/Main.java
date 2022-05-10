@@ -1,6 +1,8 @@
 package pl.zaawansowanetechnikiobiektowe;
 
 import devices.Car;
+import devices.Device;
+import devices.Phone;
 
 public class Main {
 
@@ -46,5 +48,10 @@ public class Main {
 
         System.out.println(car.toString());
         System.out.println(human.getCarToString());
+
+        Phone phone = new Phone();
+        phone.turnOn();
+
     }
+
 }

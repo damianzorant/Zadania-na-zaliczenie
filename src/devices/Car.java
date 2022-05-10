@@ -1,6 +1,6 @@
 package devices;
 
-public class Car {
+public class Car extends Device {
     String Colour;
     public String Model;
     public String Producer;
@@ -15,4 +15,8 @@ public class Car {
         return Model + Producer + Value;
     }
 
+    @Override
+    public void turnOn() {
+
+    }
 }
