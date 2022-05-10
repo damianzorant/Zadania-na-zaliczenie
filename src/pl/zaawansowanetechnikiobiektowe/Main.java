@@ -58,12 +58,9 @@ public class Main {
 
         Human buyer = new Human();
         Human seller = new Human();
-        }
-    }
 
 
     // z zajec 11
-    public static void main(String[] args) {
 
         Car fiat = new Car();
         fiat.value = 10000.0;
@@ -79,6 +76,17 @@ public class Main {
 
         System.out.println("Suma wartości aut wynosi:");
         System.out.println(me.getValueOfGarage());
-    }
 
+
+        Phone phone1 = new Phone();
+        int money = 100;
+        phone1.installAnnApp(money, 1.0, "XYZ1", 10);
+        phone1.installAnnApp(money, 1.2, "XYZ2", 20);
+        phone1.installAnnApp(money, 1.22, "XYZ2b", 20);
+        phone1.installAnnApp(money, 2.0, "XYZULTIMATE", 50);
+
+        phone.isAppInstalled("XYZULTIMATE");
+        phone1.appsValue();
+        phone1.freeApps();
+    }
 }
