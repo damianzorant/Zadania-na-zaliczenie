@@ -1,6 +1,6 @@
 package devices;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     String Colour;
     public String Model;
     public String Producer;
@@ -17,6 +17,7 @@ public class Car extends Device {
 
     @Override
     public void turnOn() {
-
     }
+
+    abstract void refuel();
 }

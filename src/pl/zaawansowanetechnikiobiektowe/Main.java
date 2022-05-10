@@ -20,7 +20,11 @@ public class Main {
 
         Human human = new Human();
 
-        Car car = new Car("Golf", "Volkswagen");
+        Car car = new Car("Golf", "Volkswagen") {
+            public void refuel() {
+                System.out.println("Refuel...");
+            }
+        }
 
         human.car = car;
         System.out.println(human.car.Model + human.car.Producer);
