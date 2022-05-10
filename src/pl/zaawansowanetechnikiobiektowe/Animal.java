@@ -5,7 +5,8 @@ public class Animal {
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 2.0;
 
-    final String spacies;
+    String spacies = "dog";
+    String owner;
     String name;
     Integer age;
     private Double weight;
@@ -33,5 +34,25 @@ public class Animal {
         System.out.println("thx for foood");
     }
 
-
+    public sellable sellable = new sellable() {
+        @Override
+        public boolean sell(Human seller, Human buyer, Double price) {
+            buyer.salary = 50D;
+            if (buyer.animal.species != seller.animal.species) {
+                System.out.println("Sprzedający nie posiada tego zwierzęcia");
+                return false;
+            }
+            if (price > buyer.salary) {
+                System.out.println("Kupujący nie ma dość gotówki");
+                return false;
+            }
+            if (buyer.animal.species == Human || seller.animal.species == Human){
+                System.out.println("Handel ludźmi jest niemożliwy")
+            }
+            buyer.salary = buyer.salary - price;
+            seller.salary = seller.salary + price;
+            owner = seller.name;
+            return true;
+        }
+    }
 }

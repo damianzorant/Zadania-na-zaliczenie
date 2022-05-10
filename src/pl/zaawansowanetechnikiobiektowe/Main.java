@@ -52,6 +52,9 @@ public class Main {
         Phone phone = new Phone();
         phone.turnOn();
 
+        Human buyer = new Human();
+        Human seller = new Human();
+        }
     }
 
 }

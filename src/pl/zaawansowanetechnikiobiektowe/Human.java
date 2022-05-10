@@ -5,11 +5,16 @@ import devices.Car;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Human {
+interface sellable {
+    boolean sell(Human seller, Human buyer, Double price);
+}
 
+public class Human {
     public Car car;
     private Double salary;
     private Double valueOfTheCar;
+    public int cash;
+    public String name;
 
         public Double getSalary() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
