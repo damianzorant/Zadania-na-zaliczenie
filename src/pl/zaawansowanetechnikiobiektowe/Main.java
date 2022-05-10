@@ -17,14 +17,19 @@ public class Main {
         Human human = new Human();
 
         Car car = new Car("Golf", "Volkswagen");
-        car.Colour = "Black";
 
         human.car = car;
-        System.out.println(human.car.Model + human.car.Producer + human.car.Colour);
+        System.out.println(human.car.Model + human.car.Producer);
 
         human.getSalary();
 
         human.setSalary(100D);
         System.out.println("Kwota wynosi :" + human.getSalary());
+
+
+        human.setCar(car);
+        System.out.println(human.getCar().Model + human.getCar().Producer);
+        human.setValueOfTheCar(200D);
+        human.getValueOfTheCar();
     }
 }
