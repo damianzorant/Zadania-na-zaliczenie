@@ -1,4 +1,7 @@
-package pl.zaawansowanetechnikiobiektowe;
+package creatures;
+
+import pl.zaawansowanetechnikiobiektowe.Human;
+import pl.zaawansowanetechnikiobiektowe.sellable;
 
 public class Animal {
     private static final Double DEFAULT_DOG_WEIGHT = 3.0;
@@ -12,7 +15,7 @@ public class Animal {
     private Double weight;
     private Boolean alive;
 
-    Animal(String spacies, String name){
+    Animal(String spacies){
         this.alive = true;
         this.spacies = spacies;
         this.name = name;
@@ -34,7 +37,7 @@ public class Animal {
         System.out.println("thx for foood");
     }
 
-    public sellable sellable = new sellable() {
+    public pl.zaawansowanetechnikiobiektowe.sellable sellable = new sellable() {
         @Override
         public boolean sell(Human seller, Human buyer, Double price) {
             buyer.salary = 50D;
