@@ -1,9 +1,9 @@
-package pl.zaawansowanetechnikiobiektowe;
+package devices;
 
 public class Car {
     String Colour;
-    final String Model;
-    final String Producer;
+    public String Model;
+    public String Producer;
     public Double Value;
 
     public Car(String model, String producer) {
@@ -11,5 +11,8 @@ public class Car {
         Producer = producer;
     }
 
+    public String toString() {
+        return Model + Producer + Value;
+    }
 
 }

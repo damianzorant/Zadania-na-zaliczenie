@@ -1,5 +1,7 @@
 package pl.zaawansowanetechnikiobiektowe;
 
+import devices.Car;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -50,6 +52,10 @@ public class Human {
         else {
             System.out.println("Zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
         }
+    }
+
+    public String getCarToString() {
+            return car.toString();
     }
 }
 

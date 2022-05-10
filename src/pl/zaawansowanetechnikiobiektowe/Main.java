@@ -1,5 +1,7 @@
 package pl.zaawansowanetechnikiobiektowe;
 
+import devices.Car;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -31,5 +33,18 @@ public class Main {
         System.out.println(human.getCar().Model + human.getCar().Producer);
         human.setValueOfTheCar(200D);
         human.getValueOfTheCar();
+
+        Car car1 = new Car("octavia", "skoda");
+        Car car2 = new Car("octavia", "skoda");
+
+        if(car1 == car2) {
+            System.out.println("To ten sam samochód");
+        }
+        else {
+            System.out.println("To są różne samochody");
+        }
+
+        System.out.println(car.toString());
+        System.out.println(human.getCarToString());
     }
 }
